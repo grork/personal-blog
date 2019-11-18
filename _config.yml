@@ -1,0 +1,16 @@
+title: Thoughts, Ruminations, & Pontifications
+description: Dominic Hopton's personal blog
+baseurl: "/ruminations"
+url: "https://www.codevoid.net/ruminations"
+twitter_username: grork
+github_username:  grork
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
