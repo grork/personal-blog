@@ -1,6 +1,6 @@
 ---
 title: Markdown Sample
-
+tags: [ "draft", "markdown", "dont-publish" ]
 ---
 Sample page, containing all the supported markdown content we can
 possibly imagine. Useful for testing. Don't publish.
