@@ -9,13 +9,21 @@
   <body>
     <h1>{{ site.title }}</h1>
     <div>
-        <ul>
-            {% for post in site.posts %}
-              <li>
-                <a href="{{ post.url | remove_first:'/' }}">{{ post.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
+      {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+      {% for year in postsByYear %}
+        <div>
+          <div>{{ year.name }}</div>
+        {% for post in year.items %}
+        <div>
+          <a href="{{ post.url | remove_first:'/' }}">{{ post.title }}</a><br>
+          <span>Published:</span>&nbsp;<span>{{ post.date | date_to_long_string: "ordinal" }}</span>
+          <div>
+            {{ post.excerpt | strip_html }}
+          </div>
+        </div>
+        {% endfor %}
+        </div>
+      {% endfor %}
     </div>
   </body>
 </html>

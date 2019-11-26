@@ -1,6 +1,10 @@
 ---
 title: Markdown Sample
+
 ---
+Sample page, containing all the supported markdown content we can
+possibly imagine. Useful for testing. Don't publish.
+
 # h1 Heading 8-)
 ## h2 Heading
 ### h3 Heading
