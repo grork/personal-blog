@@ -16,7 +16,9 @@
         {% for post in year.items %}
         <div>
           <a href="{{ post.url | remove_first:'/' }}">{{ post.title }}</a><br>
-          <span>Published:</span>&nbsp;<span>{{ post.date | date_to_long_string: "ordinal" }}</span>
+          <span>Published:</span>
+          <span>{{ post.date | date_to_long_string: "ordinal" }}</span>
+          <span>{{ post.content | reading_time_as_s }}</span>
           <div>
             {{ post.excerpt | strip_html }}
           </div>

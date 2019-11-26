@@ -8,9 +8,12 @@ github_username:  grork
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-time-to-read
 
 defaults:
-  - scope:
-      path: "_posts"
+  -
+    scope:
+      path: ""
+      type: "posts"
     values:
       layout: "post"
