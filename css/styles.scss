@@ -78,6 +78,12 @@ p {
     margin-bottom: 4px;
 }
 
+pre,
+code {
+    font-size: 14px;
+}
+
+
 .year-container {
     width: 100%;
     padding-top: 8px;
@@ -106,7 +112,7 @@ p {
     }
 
     header {
-        min-height: 300px;
+        min-height: 200px;
     }
 }
 
@@ -139,7 +145,7 @@ a.post-title {
 .post-container {
     line-height: 165%;
 
-    > :first-child {
+    > p:first-child {
         font-style: oblique;
         color: #9C9C9C;
     }
@@ -180,4 +186,9 @@ a.post-title {
 
 img.image-full-bleed {
     width: 100vw;
+}
+
+.attribution-container {
+    margin-top: 0px;
+    margin-bottom: 12px;
 }

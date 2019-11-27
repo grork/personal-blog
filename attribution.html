@@ -1,0 +1,17 @@
+---
+title: Attributions
+layout: post
+---
+<p>
+    Tools &amp; technology this site uses. It's always important to call out
+    those doing good work so we all share the love.
+</p>
+
+{% for attribution in site.attributions %}
+<div class="attribution-container">
+    <h3>
+        <a href="{{ attribution.source }}">{{ attribution.title }}</a>
+    </h3>
+    {{ attribution.content | markdownify }}
+</div>
+{% endfor %}

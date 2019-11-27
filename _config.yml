@@ -10,6 +10,10 @@ plugins:
   - jekyll-feed
   - jekyll-time-to-read
 
+collections:
+  attributions:
+    sort_by: position
+
 defaults:
   -
     scope:
