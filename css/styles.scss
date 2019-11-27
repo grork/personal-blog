@@ -7,6 +7,14 @@ body {
     font-family: sans-serif;
 }
 
+/* Reset figure & pre so they don't have their
+   default margins making spacing look off */
+figure,
+pre {
+    margin: 0;
+}
+
+
 header {
     margin-left: 150px;
     max-width: $main-width;

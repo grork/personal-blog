@@ -70,21 +70,21 @@ Lazy
 Inline `code`
 
 Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
+{% highlight javascript linenos %}
+// Some comments
+line 1 of code
+line 2 of code
+line 3 of code
+{% endhighlight %}
 
 Block code "fences"
-
 ```
 Sample text here...
 ```
 
 Syntax highlighting
 
-``` js
+``` csharp
 var foo = function (bar) {
   return bar++;
 };
