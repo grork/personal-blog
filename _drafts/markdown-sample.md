@@ -1,5 +1,5 @@
 ---
-title: Markdown Sample
+title: Markdown Sample containing many items of interest
 tags: [ "draft", "markdown", "dont-publish" ]
 ---
 Sample page, containing all the supported markdown content we can
@@ -121,7 +121,8 @@ Right aligned columns
 
 ## Images
 
-![Minion](https://octodex.github.com/images/minion.png)
+![Minion](https://octodex.github.com/images/minion.png){: .image-full-bleed }
+{: .image-container }
 ![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
 Like links, Images also have a footnote style syntax

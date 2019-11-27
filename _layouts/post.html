@@ -7,8 +7,10 @@
     <title>{{ site.title }} &mdash; {{ page.title }}</title>
   </head>
   <body>
-    <header class="post-summary">
+    <header>
       <h1>{{ page.title }}</h1>
+    </header>
+    <div class="post-summary">
       <div class="post-details">
         <span>{{ page.date | date_to_long_string: "ordinal" }}</span>,
         <span>{{ page.content | reading_time_as_s }} to read</span>
@@ -17,8 +19,8 @@
           {% for tag in page.tags %}
             <div class="post-tag">{{ tag }}</div>
           {% endfor %}
-        </div>
-    </header>
+      </div>
+    </div>
     <div class="post-container">
         {{ content }}
     </div>

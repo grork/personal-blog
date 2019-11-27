@@ -5,6 +5,13 @@ $main-width: 512px;
 /* Main Content */
 body {
     font-family: sans-serif;
+
+    > *:not(.post-container),
+    .post-container > *:not(.image-container) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 768px;
+    }
 }
 
 /* Reset figure & pre so they don't have their
@@ -49,9 +56,10 @@ table {
 }
 
 header {
-    margin-left: 150px;
-    max-width: $main-width;
     line-height: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     
     h1 {
         font-weight: 100;
@@ -61,8 +69,7 @@ header {
 }
 
 .year-container {
-    display: flex;
-    flex-direction: row;
+    width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
 }
@@ -70,10 +77,31 @@ header {
 .year-display {
     width: 150px;
     box-sizing: border-box;
-    text-align: end;
     padding-right: 12px;
     padding-top: 2px;
+    padding-bottom: 4px;
     color: #9C9C9C;
+}
+
+@media only screen and (min-width: 900px) {
+    .year-display {
+        position: absolute;
+        margin-left: -162px;
+        text-align: end;
+    }
+
+    .year-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header {
+        min-height: 300px;
+    }
+}
+
+.year-posts {
+    width: 100%;
 }
 
 a.post-title {
@@ -96,7 +124,6 @@ a.post-title {
 
 .post-excerpt {
     line-height: 165%;
-
 }
 
 .post-container {
@@ -128,9 +155,6 @@ a.post-title {
 }
 
 .post-container {
-    margin-left: 150px;
-    max-width: 768px;
-
     img {
         max-width: 100%;
     }
@@ -142,4 +166,8 @@ a.post-title {
         border-radius: 4px;
         transform: translateX(-10px)
     }
+}
+
+img.image-full-bleed {
+    width: 100vw;
 }
