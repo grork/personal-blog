@@ -8,16 +8,21 @@
     <title>{{ site.title }}</title>
   </head>
   <body>
+    <!-- Site Header -->
     <header>
       <h1>{{ site.title }}</h1>
     </header>
+    <!-- Grouped by Year -->
     <div class="layout-container">
       {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
       {% for year in postsByYear %}
+        <!-- Individual year -->
         <div class="year-container">
           <div class="year-display">{{ year.name }}</div>
+          <!-- Posts in that year -->
           <div class="year-posts">
             {% for post in year.items %}
+            <!-- Individual Post -->
             <div class="post-summary">
               <a class="post-title" href="{{ post.url | remove_first:'/' }}">{{ post.title }}</a>
               <div class="post-details">
@@ -27,6 +32,8 @@
               <div class="post-excerpt">
                 {{ post.excerpt | strip_html }}
               </div>
+
+              <!-- Tags in that post -->
               <div class="post-tags">
                 {% for tag in post.tags %}
                   <div class="post-tag">{{ tag }}</div>
