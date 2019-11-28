@@ -11,3 +11,4 @@ On this site, I use these icons in SVG format:
 - LinkedIn
 - GitHub
 - Twitter
+- Home

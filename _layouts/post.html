@@ -8,6 +8,7 @@
   </head>
   <body>
     <header>
+      <a href="{% link index.html %}" title="Home"><img src="{{ "/images/home.svg" | relative_url }}"></a>
       <h1>{{ page.title }}</h1>
     </header>
     {% if page.date %}
@@ -26,6 +27,16 @@
     <div class="post-container">
         {{ content }}
     </div>
+    {% if page.next != nil or page.previous != nil %}
+    <div class="post-navigation">
+      {% if page.previous != nil %}
+      <a href="{{ page.previous.url | relative_url }}">previous</a>
+      {% endif %}
+      {% if page.next != nil %}
+      <a href="{{ page.next.url | relative_url }}">next</a>
+      {% endif %}
+    </div>
+    {% endif %}
     {% include footer.html %}
   </body>
 </html>

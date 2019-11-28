@@ -5,6 +5,7 @@ $main-width: 512px;
 /* Main Content */
 body {
     font-family: sans-serif;
+    padding-bottom: 48px;
 
     > *:not(.post-container),
     .post-container > *:not(.image-container) {
@@ -61,6 +62,11 @@ header {
         font-size: 48px;
         margin-bottom: 16px;
     }
+
+    img {
+        height: 14px;
+        align-self: flex-start;
+    }
 }
 
 footer {
@@ -71,6 +77,10 @@ footer {
         height: 14px;
         margin: 0px 2px;
     }
+}
+
+.post-navigation {
+    margin-bottom: 12px;
 }
 
 p {
