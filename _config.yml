@@ -9,6 +9,7 @@ github_username:  grork
 plugins:
   - jekyll-feed
   - jekyll-time-to-read
+  - jekyll-seo-tag
 
 collections:
   attributions:
