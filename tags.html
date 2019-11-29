@@ -1,0 +1,36 @@
+---
+---
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% feed_meta %}
+    {% seo title=false %}
+    <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+    <title>Tags &emdash; {{ site.title }}</title>
+  </head>
+  <body class="tags-page">
+    <!-- Site Header -->
+    <header>
+      <a href="{% link index.html %}" title="Home"><img src="{{ "/images/home.svg" | relative_url }}"></a>
+      <h1>Tags</h1>
+    </header>
+    <!-- Grouped by Tag -->
+    {% assign sortedTags = site.tags | sort %}
+    {% for tagItem in sortedTags %}
+      <!-- Individual Tag -->
+      <div class="group-container" id="tag-{{ tagItem[0] }}">
+        <div class="group-display">{{ tagItem[0] }}</div>
+        <!-- Posts in that tag -->
+        <div class="group-posts">
+        {% for post in site.posts %}
+            {% if post.tags contains tagItem[0] %} 
+                {% include individual_post.html %}
+            {% endif %}
+        {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+    {% include footer.html %}
+  </body>
+</html>

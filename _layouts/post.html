@@ -21,7 +21,7 @@
       </div>
       <div class="post-tags">
           {% for tag in page.tags %}
-            <div class="post-tag">{{ tag }}</div>
+            <div class="post-tag"><a href="{{ "tags.html" | relative_url }}#tag-{{ tag }}">{{ tag }}</a></div>
           {% endfor %}
       </div>
     </div>

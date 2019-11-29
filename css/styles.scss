@@ -13,6 +13,10 @@ body {
         margin-right: auto;
         max-width: 768px;
     }
+
+    &.tags-page {
+        padding-bottom: 90vh;
+    }
 }
 
 /* Reset figure & pre so they don't have their
@@ -94,13 +98,13 @@ code {
 }
 
 
-.year-container {
+.group-container {
     width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
 }
 
-.year-display {
+.group-display {
     width: 150px;
     box-sizing: border-box;
     padding-right: 12px;
@@ -110,13 +114,13 @@ code {
 }
 
 @media only screen and (min-width: 900px) {
-    .year-display {
+    .group-display {
         position: absolute;
         margin-left: -162px;
         text-align: end;
     }
 
-    .year-container {
+    .group-container {
         display: flex;
         flex-direction: row;
     }
@@ -126,7 +130,7 @@ code {
     }
 }
 
-.year-posts {
+.group-posts {
     width: 100%;
 }
 
@@ -177,6 +181,11 @@ a.post-title {
         margin-right: 8px;
         padding: 6px 8px;
         border-radius: 4px;
+
+        > a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
 }
 
