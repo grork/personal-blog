@@ -10,6 +10,8 @@ plugins:
   - jekyll-feed
   - jekyll-time-to-read
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - octopress-minify-html
 
 collections:
   attributions:
