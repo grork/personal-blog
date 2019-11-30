@@ -238,5 +238,19 @@ img.image-fill-width {
 
 .attribution-container {
     margin-top: 0px;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    h3 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 }
