@@ -37,10 +37,10 @@
     {% if page.next != nil or page.previous != nil %}
     <div class="post-navigation">
       {% if page.previous != nil %}
-      <a href="{{ page.previous.url | relative_url }}">previous</a>
+      <a href="{{ page.previous.url | relative_url }}" class="nav-previous">previous</a>
       {% endif %}
       {% if page.next != nil %}
-      <a href="{{ page.next.url | relative_url }}">next</a>
+      <a href="{{ page.next.url | relative_url }}" class="nav-next">next</a>
       {% endif %}
     </div>
     {% endif %}

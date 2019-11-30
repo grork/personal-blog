@@ -28,7 +28,14 @@ pre {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 12px 0px;
+    margin-left: 0px;
+    margin-top: 12px;
+    margin-right: 0px;
+    margin-bottom: 4px;
+
+    + p {
+        margin-top: 0px;
+    }
 }
 
 blockquote {
@@ -96,16 +103,18 @@ footer {
 }
 
 .post-navigation {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 12px;
 
-    > a:first-child {
-        align-self: flex-start;
+    > a.nav-previous {
+        grid-column: 1;
+        justify-self: start;
     }
 
-    > a:last-child {
-        align-self: flex-end;
+    > a.nav-next {
+        grid-column: 2;
+        justify-self: end;
     }
 }
 
@@ -126,12 +135,13 @@ p:first-child {
 
 pre,
 code {
-    font-size: 14px;
+    font-size: 16px;
+    white-space: pre-wrap;
 }
 
 .group-container {
     width: 100%;
-    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .group-display {
@@ -173,7 +183,11 @@ a.post-title {
 
 .post-summary {
     font-size: 16px;
-    padding-bottom: 12px;
+    padding-bottom: 24px;
+}
+
+.post-summary:last-child {
+    padding-bottom: 28px;
 }
 
 .post-details {
@@ -188,7 +202,7 @@ a.post-title {
 }
 
 .post-container {
-    line-height: 165%;
+    line-height: 135%;
 
     > ol,
     > ul {
