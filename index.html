@@ -16,6 +16,7 @@
     </header>
     <!-- Grouped by Year -->
     {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+    <main>
     {% for year in postsByYear %}
       <!-- Individual year -->
       <div class="group-container">
@@ -28,6 +29,7 @@
         </div>
       </div>
     {% endfor %}
+    </main>
     {% include footer.html %}
   </body>
 </html>

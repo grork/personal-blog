@@ -12,9 +12,10 @@
   <body class="tags-page">
     <!-- Site Header -->
     <header>
-      <a href="{% link index.html %}" title="Home"><img src="{{ "/images/home.svg" | relative_url }}"></a>
+      <a href="{% link index.html %}" title="Home"><img src="{{ "/images/home.svg" | relative_url }}" alt="Home"></a>
       <h1>Tags</h1>
     </header>
+    <main>
     <!-- Grouped by Tag -->
     {% assign sortedTags = site.tags | sort %}
     {% for tagItem in sortedTags %}
@@ -31,6 +32,7 @@
         </div>
       </div>
     {% endfor %}
+    </main>
     {% include footer.html %}
   </body>
 </html>
