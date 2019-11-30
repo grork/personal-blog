@@ -73,6 +73,18 @@ header {
     }
 }
 
+summary {
+    font-style: oblique;
+    color: #9C9C9C;
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+article {
+    font-size: 18px;
+    padding-bottom: 28px;
+}
+
 footer {
     font-size: 14px;
 
@@ -84,12 +96,32 @@ footer {
 }
 
 .post-navigation {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 12px;
+
+    > a:first-child {
+        align-self: flex-start;
+    }
+
+    > a:last-child {
+        align-self: flex-end;
+    }
 }
 
 p {
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+p:last-child {
+    margin-top: 28px;
+    margin-bottom: 0px;
+}
+
+p:first-child {
+    margin-top: 0px;
+    margin-bottom: 12px;
 }
 
 pre,
@@ -101,7 +133,6 @@ code {
 .group-container {
     width: 100%;
     padding-top: 8px;
-    padding-bottom: 8px;
 }
 
 .group-display {
@@ -142,14 +173,15 @@ a.post-title {
 }
 
 .post-summary {
-    font-size: 14px;
+    font-size: 16px;
+    padding-bottom: 12px;
 }
 
 .post-details {
     font-weight: 100;
     padding-top: 8px;
     padding-bottom: 4px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .post-excerpt {
@@ -158,11 +190,6 @@ a.post-title {
 
 .post-container {
     line-height: 165%;
-
-    > p:first-child {
-        font-style: oblique;
-        color: #9C9C9C;
-    }
 
     > ol,
     > ul {
@@ -199,7 +226,6 @@ a.post-title {
         background-color: whitesmoke;
         padding: 8px;
         border-radius: 4px;
-        transform: translateX(-10px)
     }
 }
 

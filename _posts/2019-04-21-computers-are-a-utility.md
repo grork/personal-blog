@@ -1,6 +1,7 @@
 ---
 title: Computers are a utility &mdash; they should behave like one
 tags: [ "rant" ]
+description: Wherein I get a bit ranty about some bad computering.
 ---
 This post inspired by _yet again going_ to pootle around on my personal
 “computers” at the weekend, and _yet again **one**_ of them decides to just get

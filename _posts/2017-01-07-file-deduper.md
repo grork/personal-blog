@@ -1,9 +1,8 @@
 ---
 title: FileDeduper
 tags: ["tools", "programming", "personal" ]
+description: Why I wrote a tool to find duplicate files (by MD5-hash)
 ---
-Why I wrote a tool to find duplicate files (by MD5-hash)
-
 I’ve authored a tool called FileDeduper, which scavenges a file system,
 MD5-hashes all the files, and then moves all the duplicates to a destination
 directory keeping the original tree structure. The intent with “move” rather

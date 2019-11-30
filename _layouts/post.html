@@ -26,6 +26,11 @@
       </div>
     </div>
     {% endif %}
+    {% if page.description != nil %}
+    <summary>
+      {{ page.description }}
+    </summary>
+    {% endif %}
     <article class="post-container">
         {{ content }}
     </article>
