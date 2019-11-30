@@ -4,6 +4,7 @@ baseurl: "/ruminations"
 url: "https://www.codevoid.net/ruminations"
 twitter_username: grork
 github_username:  grork
+exclude: [ "readme.md" ]
 
 # Build settings
 plugins:
