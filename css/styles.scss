@@ -148,9 +148,10 @@ code {
     width: 150px;
     box-sizing: border-box;
     padding-right: 12px;
-    padding-top: 2px;
     padding-bottom: 4px;
     color: #9C9C9C;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 @media only screen and (min-width: 900px) {
@@ -158,6 +159,7 @@ code {
         position: absolute;
         margin-left: -162px;
         text-align: end;
+        transform: translateY(-4px);
     }
 
     .group-container {
