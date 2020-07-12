@@ -29,13 +29,17 @@ pre {
 
 h1, h2, h3, h4, h5, h6 {
     margin-left: 0px;
-    margin-top: 12px;
+    margin-top: 16px;
     margin-right: 0px;
     margin-bottom: 4px;
 
     + p {
         margin-top: 0px;
     }
+}
+
+h2 {
+    font-size: 1.3em;
 }
 
 blockquote {
@@ -119,8 +123,8 @@ footer {
 }
 
 p {
-    margin-top: 28px;
-    margin-bottom: 28px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 p:last-child {
@@ -205,11 +209,6 @@ a.post-title {
 
 .post-container {
     line-height: 135%;
-
-    > ol,
-    > ul {
-        transform: translateX(-20px);
-    }
 }
 
 .post-tags {
@@ -241,6 +240,11 @@ a.post-title {
         background-color: whitesmoke;
         padding: 8px;
         border-radius: 4px;
+    }
+
+    h1, h2, h3, h4, h5, h6, h7 {
+        font-weight: 400;
+        color: #5e5d5d;
     }
 }
 
