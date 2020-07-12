@@ -10,12 +10,14 @@
     <title>{{ page.title }} &mdash; {{ site.title }}</title>
   </head>
   <body>
+    <!-- Title and link to  home-->
     <header>
       <a href="{% link index.html %}" title="Home"><img src="{{ "/images/home.svg" | relative_url }}" alt="Home"></a>
       <h1>{{ page.title }}</h1>
     </header>
+    <!-- Summary information for the post inc. tags. -->
     {% if page.date %}
-    <div class="post-summary">
+    <section class="post-summary">
       <div class="post-details">
         <span>{{ page.date | date_to_long_string: "ordinal" }}</span>,
         <span>{{ page.content | reading_time_as_s }} to read</span>
@@ -25,25 +27,27 @@
             <div class="post-tag"><a href="{{ "tags.html" | relative_url }}#tag-{{ tag }}">{{ tag }}</a></div>
           {% endfor %}
       </div>
-    </div>
+    </section>
     {% endif %}
     {% if page.description != nil %}
     <summary>
       {{ page.description }}
     </summary>
     {% endif %}
+    <!-- Main article body -->
     <article class="post-container">
         {{ content }}
     </article>
+    <!-- Footer for previous / next / social-media links -->
     {% if page.next != nil or page.previous != nil %}
-    <div class="post-navigation">
+    <footer class="post-navigation">
       {% if page.previous != nil %}
       <a href="{{ page.previous.url | relative_url }}" class="nav-previous">previous</a>
       {% endif %}
       {% if page.next != nil %}
       <a href="{{ page.next.url | relative_url }}" class="nav-next">next</a>
       {% endif %}
-    </div>
+    </footer>
     {% endif %}
     {% include footer.html %}
   </body>
