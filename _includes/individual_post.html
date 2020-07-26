@@ -6,6 +6,9 @@
         <span>{{ post.content | reading_time_as_s }} to read</span>
     </div>
     <div class="post-excerpt">
+        {% if post.description %}
+        <summary>{{ post.description }}</summary>
+        {% endif %}
         {{ post.excerpt | strip_html }}
     </div>
 

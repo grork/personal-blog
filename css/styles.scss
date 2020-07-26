@@ -205,6 +205,10 @@ a.post-title {
 
 .post-excerpt {
     line-height: 165%;
+
+    summary {
+        margin-bottom: 3px;
+    }
 }
 
 .post-container {
