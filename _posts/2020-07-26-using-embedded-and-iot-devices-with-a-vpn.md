@@ -169,3 +169,11 @@ ip rule del from 192.168.0.42 table openvpn # Device A IP address
 
 echo --- Tear Down Completed >> ~/vpn_log.txt
 ```
+
+### Configure client device to use the gateway
+The final step to making all of this work is to configure the client device itself
+to use the router as it's gateway, and DNS on your private network. This is heavily
+dependent on the specific device. But, tl;dr:
+1. Configure the default gateway to be the IP address of the device where you have
+   configured routing
+2. Set the DNS to the IP address of DNS services on your private VPN network
