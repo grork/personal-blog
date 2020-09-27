@@ -247,9 +247,21 @@ a.post-title {
     }
 
     h1, h2, h3, h4, h5, h6, h7 {
-        font-weight: 400;
+        font-weight: 100;
         color: #5e5d5d;
     }
+
+    h1 { font-size: 3em; }
+    h2 {
+        font-size: 2em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+    h3 { font-size: 1.25em; }
+    h4 { font-size: 1.0em; }
+    h5 { font-size: 0.75em; }
+    h6 { font-size: 0.5em; }
+    h7 { font-size: 0.3em; }
 }
 
 img.image-full-bleed {
