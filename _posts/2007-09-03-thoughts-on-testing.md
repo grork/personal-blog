@@ -11,7 +11,6 @@ parts) as a blog post. Do note this was written back in **2007**. Also, the
 publisher was pushing to hit a specific page count to justify the price, so in
 some cases I am… wordier… than one should be. Sorry._
 
-
 # Chapter 3 - Unit Testing
 Often developers ask when they’re writing their applications, “Am I doing this
 right? Did I break anything else?” Unit testing provides a simple, efficient,
