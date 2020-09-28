@@ -2,6 +2,55 @@
 ---
 $main-width: 512px;
 
+:root {
+    color-scheme: light dark;
+    --post-title-colour: black;
+    --quote-background-colour: #D8D8D8;
+    --table-background-colour: whitesmoke;
+    --table-header-underline-colour: black;
+    --sumary-font-colour: #9C9C9C;
+    --group-header-font-colour: #9C9C9C;
+    --tag-background-colour: #D8D8D8;
+    --tag-font-colour: #454545;
+    --higlight-background-colour: whitesmoke;
+    --header-font-colour: #5e5d5d;
+}
+
+@media (prefers-color-scheme: dark) {
+    img[src$=".svg"] {
+        filter: invert(100%) sepia(0%) saturate(7464%) hue-rotate(149deg) brightness(96%) contrast(107%);
+    }
+
+    :root {
+        --post-title-colour: white;
+        --quote-background-colour: inherit;
+        --table-background-colour: black;
+        --table-header-underline-colour: white;
+        --sumary-font-colour: rgb(172, 172, 172);
+        --group-header-font-colour: #9C9C9C;
+        --tag-background-colour: #000000;
+        --tag-font-colour: #adadad;
+        --higlight-background-colour: #3b3b3b;
+        --header-font-colour: #6b6b6b;
+    }
+
+    body {
+        color: #ebebeb;
+    }
+
+    a:visited {
+        color: #a9a9ff;
+    }
+
+    a {
+        color: #d4d4ff;
+    }
+
+    .rouge-table {
+        background-color: var(--quote-background-colour);
+    }
+}
+
 /* Main Content */
 body {
     font-family: sans-serif;
@@ -45,14 +94,14 @@ h2 {
 blockquote {
     border-left-style: solid;
     border-left-width: 4px;
-    border-left-color: #D8D8D8;
+    border-left-color: var(--quote-background-colour);
     padding-left: 12px;
     margin-left: 0px;
     font-style: oblique;
 }
 
 table {
-    background-color: whitesmoke;
+    background-color: var(--table-background-colour);
     border-radius: 4px;
     border-spacing: 0px;
     padding: 4px 8px;
@@ -62,7 +111,7 @@ table {
     th {
         border-bottom-style: solid;
         border-bottom-width: 1px;
-        border-bottom-color: black;
+        border-bottom-color: var(--table-header-underline-colour);
     }
 }
 
@@ -86,7 +135,7 @@ header {
 
 summary {
     font-style: oblique;
-    color: #9C9C9C;
+    color: var(--sumary-font-colour);
     margin-top: 0px;
     margin-bottom: 12px;
 }
@@ -153,7 +202,7 @@ code {
     box-sizing: border-box;
     padding-right: 12px;
     padding-bottom: 4px;
-    color: #9C9C9C;
+    color: var(--group-header-font-colour);
     font-size: 24px;
     font-weight: bold;
 }
@@ -184,7 +233,7 @@ a.post-title {
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-    color: black;
+    color: var(--post-title-colour);
 }
 
 .post-summary {
@@ -221,8 +270,8 @@ a.post-title {
     margin-top: 8px;
     
     .post-tag {
-        background-color: #D8D8D8;
-        color: #454545;
+        background-color: var(--tag-background-colour);
+        color: var(--tag-font-colour);
         margin-right: 8px;
         padding: 6px 8px;
         border-radius: 4px;
@@ -241,17 +290,21 @@ a.post-title {
 
     > .highlight,
     > .highlighter-rouge {
-        background-color: whitesmoke;
+        background-color: var(--higlight-background-colour);
         padding: 8px;
         border-radius: 4px;
     }
 
     h1, h2, h3, h4, h5, h6, h7 {
         font-weight: 100;
-        color: #5e5d5d;
+        color: var(--header-font-colour);
     }
 
-    h1 { font-size: 3em; }
+    h1 {
+        font-size: 3em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
     h2 {
         font-size: 2em;
         margin-top: 1em;
