@@ -1,6 +1,7 @@
 ---
 title: About
 layout: post
+comments: false
 ---
 All about Dominic
 
@@ -8,4 +9,5 @@ All about Dominic
 - Spends too much time on twitter
 - Enjoys software
 
-Please note, this site is copyright &copy; 2019, Dominic Hopton
+If you have any comments about this site, please file an issue on
+[GitHub](https://github.com/grork/personal-blog/issues)

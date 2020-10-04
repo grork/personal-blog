@@ -38,6 +38,16 @@
     <article class="post-container">
         {{ content }}
     </article>
+    {% if page.comments != false %}
+    <script src="https://utteranc.es/client.js"
+        repo="grork/personal-blog"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        async>
+    </script>
+    {% endif %}
     <!-- Footer for previous / next / social-media links -->
     {% if page.next != nil or page.previous != nil %}
     <footer class="post-navigation">
