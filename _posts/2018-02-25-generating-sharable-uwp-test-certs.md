@@ -2,6 +2,13 @@
 title: Generating sharable UWP test certs
 tags: [ "uwp", "windows", "pro-tip" ]
 ---
+
+_Update Dec 28th 2020_: Visual Studio 2019 no longer generates certificates by
+default when creating a UWP project (yay), so you don't end up broken out of the
+box! **Plus**, when you go through the 'Create App Package' flow, it will ask to
+create certifcates – when prompted for a password, just don't enter one, and
+it'll do the right thing. Hurrah!
+
 Have you ever created a UWP project that you check into a Source Control system?
 Tried to build it on multiple devices, or share with a team? I’m pretty sure
 you’ve seen the warning from Visual Studio during build saying “`Couldn’t find
