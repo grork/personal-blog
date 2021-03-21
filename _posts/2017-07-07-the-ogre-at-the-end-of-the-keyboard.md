@@ -16,7 +16,11 @@ with. And they keep doing it. All the damn time.
 But you can’t avoid these jerks. Pull Requests (nee, Code Reviews) are a
 fundamental part of software development. Its critical that they’re productive,
 welcoming, and inclusive. But they’re not:  
-https://twitter.com/sehurlburt/status/859108203056857088
+> When you write and/or submit code for review, do you feel emotionally vulnerable? [poll]
+> — Stephanie Hurlburt (@sehurlburt) [May 1, 2017](https://twitter.com/sehurlburt/status/859108203056857088)[^deleted]
+
+[^deleted]: This tweet was deleted, but copied from prior to deletion
+
 
 Slack recently published a great article “[On empathy & Pull
 Requests](https://slack.engineering/on-empathy-pull-requests-979e4257d158)”.
