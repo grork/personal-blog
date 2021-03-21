@@ -15,6 +15,11 @@
       <a href="{% link index.html %}" title="Home"><img src="{{ "/images/home.svg" | relative_url }}" alt="Home"></a>
       <h1>{{ page.title }}</h1>
     </header>
+    {% if page.description != nil %}
+    <summary>
+      {{ page.description }}
+    </summary>
+    {% endif %}
     <!-- Summary information for the post inc. tags. -->
     {% if page.date %}
     <section class="post-summary">
@@ -28,11 +33,6 @@
           {% endfor %}
       </div>
     </section>
-    {% endif %}
-    {% if page.description != nil %}
-    <summary>
-      {{ page.description }}
-    </summary>
     {% endif %}
     <!-- Main article body -->
     <article class="post-container">

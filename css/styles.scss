@@ -6,14 +6,16 @@ $main-width: 512px;
     color-scheme: light dark;
     --post-title-colour: black;
     --quote-background-colour: #D8D8D8;
-    --table-background-colour: whitesmoke;
-    --table-header-underline-colour: black;
     --sumary-font-colour: #9C9C9C;
     --group-header-font-colour: #9C9C9C;
     --tag-background-colour: #D8D8D8;
     --tag-font-colour: #454545;
     --higlight-background-colour: whitesmoke;
     --header-font-colour: #5e5d5d;
+    --table-header-background-colour: whitesmoke;
+    --table-header-underline-colour: black;
+    --table-border-colour: #ddd;
+    --table-border-raidus: 8px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,14 +26,16 @@ $main-width: 512px;
     :root {
         --post-title-colour: white;
         --quote-background-colour: inherit;
-        --table-background-colour: black;
-        --table-header-underline-colour: white;
         --sumary-font-colour: rgb(172, 172, 172);
         --group-header-font-colour: #9C9C9C;
         --tag-background-colour: #000000;
         --tag-font-colour: #adadad;
         --higlight-background-colour: #3b3b3b;
         --header-font-colour: #6b6b6b;
+
+        --table-header-background-colour: rgb(46, 46, 46);
+        --table-header-underline-colour: rgb(224, 224, 224);
+        --table-border-colour: rgb(110, 110, 110);
     }
 
     body {
@@ -101,17 +105,54 @@ blockquote {
 }
 
 table {
-    background-color: var(--table-background-colour);
-    border-radius: 4px;
-    border-spacing: 0px;
-    padding: 4px 8px;
     transform: translateX(-10px);
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px;
+    text-align: start;
 
     th {
         border-bottom-style: solid;
         border-bottom-width: 1px;
         border-bottom-color: var(--table-header-underline-colour);
+        background-color: var(--table-header-background-colour);
+        text-align: start;
+    }
+
+    td {
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--table-border-colour);
+    }
+
+    td, th {
+        padding: 12px;
+    }
+
+    tr td {
+        border-top-width: 0px;
+        border-left-width: 1px;
+        border-right-width: 0px;
+    }
+
+    tr td:last-child {
+        border-right-width: 1px;
+    }
+
+    tr:last-child td:first-child {
+        border-bottom-left-radius: var(--table-border-raidus);
+    }
+
+    tr:last-child td:last-child {
+        border-bottom-right-radius: var(--table-border-raidus);
+    }
+
+    tr:first-child th:first-child {
+        border-top-left-radius: var(--table-border-raidus);
+    }
+
+    tr:first-child th:last-child {
+        border-top-right-radius: var(--table-border-raidus);
     }
 }
 
