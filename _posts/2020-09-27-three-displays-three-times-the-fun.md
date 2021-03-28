@@ -5,9 +5,6 @@ description: Turns out, connecting three high resolution displays to a MacBook
   Pro 13” is a bit bothersome. Getting it just-so, total pain. Worth it.
 ---
 
-_Update 23/03/2021: Updated to include details (see addendum at the end) on the
-new Thunderbolt Hubs that have gotten me to the single cable life!_
-
 I’ve always liked large displays. Prior to The Distancing™ I was constantly
 going between meetings & my workspace, so one large 40” monitor sufficed to stop
 me from being hunched over a 13” laptop display at my desk. With work-from-home,
@@ -18,6 +15,8 @@ thank you!
 
 _Obviously_, the answer to this conundrum is to have three.
 
+_Update 23/03/2021: Updated to include details (see addendum at the end) on the
+new Thunderbolt Hubs that have gotten me to the single cable life!_
 ## Constraints
 
 ### Going for the triple
