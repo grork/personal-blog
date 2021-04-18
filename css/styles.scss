@@ -57,7 +57,7 @@ $main-width: 512px;
 
 /* Main Content */
 body {
-    font-family: sans-serif;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";    
     padding-bottom: 48px;
 
     > *:not(.post-container),
@@ -182,7 +182,7 @@ summary {
 }
 
 article {
-    font-size: 18px;
+    font-size: 16px;
     padding-bottom: 28px;
 }
 
@@ -294,7 +294,7 @@ a.post-title {
 }
 
 .post-excerpt {
-    line-height: 165%;
+    line-height: 145%;
 
     summary {
         margin-bottom: 3px;
@@ -302,7 +302,7 @@ a.post-title {
 }
 
 .post-container {
-    line-height: 135%;
+    line-height: 145%;
 
     h1, h2, h3, h4, h5, h6 {
         line-height: initial;
