@@ -2,12 +2,12 @@
 title: Always be looking ahead. Not everyone is an asshole.
 tags: [ "software", "opinions", "pull-requests" ]
 ---
-Recently, I was watching a talk by [Matt Drance](https://twitter.com/drance) from
-his 2015 CocoaConf talk ["What The Race Track Taught Me About Software
-Development"](https://vimeo.com/131824328). I wanted to watch it because I’ve
-found his tweets & writings in the past to be interesting & thought provoking —
-that and I like to think I’m kinda a car guy. Race tracks? Software development?
-Sure, this should be fun!
+Recently, I was watching a talk by [Matt Drance](https://twitter.com/drance)
+from his 2015 CocoaConf talk ["What The Race Track Taught Me About Software
+Development"](https://vimeo.com/131824328) _[Currently unavailable]_. I wanted
+to watch it because I’ve found his tweets & writings in the past to be
+interesting & thought provoking — that and I like to think I’m kinda a car guy.
+Race tracks? Software development? Sure, this should be fun!
 
 It’s message is not so much that _racing_ is the lens through which to view
 everything because, _gosh_, racing is just so super fantastic. It’s the
@@ -31,7 +31,8 @@ calls out that if you _understand_ the fundamental patterns, practices in a
 project with 20 files, you can apply them with equal competency to a project of
 2,000 files. It scales — it’s all the same _perspective_.
 
-I was especially enamored towards the end where Mr. Drance brought in a clip where one racer adjusts the mirror of the racer close beside them, and says:  
+I was especially enamored towards the end where Mr. Drance brought in a clip
+where one racer adjusts the mirror of the racer close beside them, and says:  
 > "If you're not trolling, you're not friends"
 
 The clarification and reiteration that this is clearly between people who are
