@@ -4,6 +4,7 @@ $main-width: 512px;
 
 :root {
     color-scheme: light dark;
+    --body-colour: #24292e;
     --post-title-colour: black;
     --quote-background-colour: #bbe6ff;
     --quote-border-colour: #bbe6ff;
@@ -25,6 +26,7 @@ $main-width: 512px;
     }
 
     :root {
+        --body-colour: #ebebeb;
         --post-title-colour: white;
         --quote-background-colour: inherit;
         --sumary-font-colour: rgb(172, 172, 172);
@@ -37,10 +39,6 @@ $main-width: 512px;
         --table-header-background-colour: rgb(46, 46, 46);
         --table-header-underline-colour: rgb(224, 224, 224);
         --table-border-colour: rgb(110, 110, 110);
-    }
-
-    body {
-        color: #ebebeb;
     }
 
     a:visited {
@@ -60,6 +58,7 @@ $main-width: 512px;
 body {
     font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";    
     padding-bottom: 48px;
+    color: var(--body-colour);
 
     > *:not(.post-container),
     .post-container > *:not(.image-container) {
