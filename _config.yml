@@ -1,7 +1,7 @@
 title: Thoughts, Ruminations, & Pontifications
 description: Dominic Hopton's personal blog
 baseurl: "/ruminations"
-url: "https://www.codevoid.net/ruminations"
+url: "https://www.codevoid.net"
 twitter_username: grork
 github_username:  grork
 exclude: [ "readme.md" ]
