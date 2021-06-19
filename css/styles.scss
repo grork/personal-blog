@@ -18,6 +18,7 @@ $main-width: 512px;
     --table-header-underline-colour: black;
     --table-border-colour: #ddd;
     --table-border-raidus: 8px;
+    --link-unvisited-colour: #8888ff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,21 +33,18 @@ $main-width: 512px;
         --sumary-font-colour: rgb(172, 172, 172);
         --group-header-font-colour: #9C9C9C;
         --tag-background-colour: #727272;
-        --tag-font-colour: white;
+        --tag-font-colour: rgb(228, 228, 228);
         --higlight-background-colour: #3b3b3b;
-        --header-font-colour: #6b6b6b;
+        --header-font-colour: #949494;
 
         --table-header-background-colour: rgb(46, 46, 46);
         --table-header-underline-colour: rgb(224, 224, 224);
         --table-border-colour: rgb(110, 110, 110);
+        --link-unvisited-colour: #d4d4ff
     }
 
     a:visited {
         color: #a9a9ff;
-    }
-
-    a {
-        color: #d4d4ff;
     }
 
     .rouge-table {
@@ -155,6 +153,10 @@ table {
     tr:first-child th:last-child {
         border-top-right-radius: var(--table-border-raidus);
     }
+}
+
+a:link {
+    color: var(--link-unvisited-colour);
 }
 
 .rouge-table .gutter.gl {
@@ -315,14 +317,6 @@ a.post-title {
     }
 }
 
-.post-container {
-    line-height: 145%;
-
-    h1, h2, h3, h4, h5, h6 {
-        line-height: initial;
-    }
-}
-
 .post-tags {
     display: flex;
     flex-direction: row;
@@ -343,6 +337,8 @@ a.post-title {
 }
 
 .post-container {
+    line-height: 145%;
+
     img {
         max-width: 100%;
     }
@@ -357,6 +353,7 @@ a.post-title {
     h1, h2, h3, h4, h5, h6, h7 {
         font-weight: 100;
         color: var(--header-font-colour);
+        line-height: initial;
     }
 
     h1 {
@@ -365,13 +362,31 @@ a.post-title {
     }
     h2 {
         font-size: 2em;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.2em;
     }
     h3 { font-size: 1.25em; }
     h4 { font-size: 1.0em; }
     h5 { font-size: 0.75em; }
     h6 { font-size: 0.5em; }
     h7 { font-size: 0.3em; }
+
+    ul {
+        margin-block-start: 0.2em;
+    }
+
+    ul > li {
+        margin-bottom: 0.2em;
+    }
+
+    p + h1,
+    p + h2,
+    p + h3,
+    p + h4,
+    p + h5,
+    p + h6,
+    p + h7 {
+        margin-top: 0.75em;
+    }
 }
 
 img.image-full-bleed {
