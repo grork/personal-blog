@@ -175,7 +175,7 @@ header {
     
     h1 {
         font-weight: 100;
-        font-size: 48px;
+        font-size: 36px;
         margin-bottom: 16px;
     }
 
@@ -186,6 +186,7 @@ header {
 }
 
 summary {
+    line-height: 145%;
     font-style: oblique;
     color: var(--sumary-font-colour);
     margin-top: 0px;
@@ -272,17 +273,24 @@ code {
         transform: translateY(-4px);
     }
 
-    .group-container {
-        display: flex;
-        flex-direction: row;
+    .article-page .article-page-home-link {
+        margin-left: -40px;
+        margin-right: 24px;
+        margin-top: 24px;
     }
 
-    header {
-        min-height: 200px;
+    .group-container,
+    .article-page > header {
+        display: flex;
+        flex-direction: row;
     }
 }
 
 .group-posts {
+    width: 100%;
+}
+
+.article-page > header > h1 {
     width: 100%;
 }
 
@@ -310,9 +318,10 @@ a.post-title {
 }
 
 .post-excerpt {
-    line-height: 145%;
+    line-height: 150%;
 
     summary {
+        line-height: 145%;
         margin-bottom: 3px;
     }
 }
@@ -337,7 +346,7 @@ a.post-title {
 }
 
 .post-container {
-    line-height: 145%;
+    line-height: 150%;
 
     img {
         max-width: 100%;
