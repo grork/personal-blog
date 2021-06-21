@@ -4,6 +4,7 @@ $main-width: 512px;
 
 :root {
     color-scheme: light dark;
+    --body-background-colour: #ffffff;
     --body-colour: #24292e;
     --post-title-colour: black;
     --quote-background-colour: #bbe6ff;
@@ -27,6 +28,7 @@ $main-width: 512px;
     }
 
     :root {
+        --body-background-colour: #232323;
         --body-colour: #ebebeb;
         --post-title-colour: white;
         --quote-background-colour: inherit;
@@ -52,6 +54,10 @@ $main-width: 512px;
     }
 }
 
+html,
+body {
+    background-color: var(--body-background-colour);
+}
 /* Main Content */
 body {
     font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";    
