@@ -283,6 +283,11 @@ code {
         margin-left: -40px;
         margin-right: 24px;
         margin-top: 24px;
+
+        /* Shuffle the home icon down a little */
+        > img {
+            margin-top: 4px;
+        }
     }
 
     .group-container,
