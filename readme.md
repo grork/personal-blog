@@ -4,6 +4,14 @@ This is the basic site for publishing my personal blog.
 Primary content is in `_posts`, layout for posts is in `_layout/posts.html`.
 
 ## How to view it locally
+### Install prerequisites
+Ruby: `brew install ruby@2.7` (and follow instructions for adding to the path)
+
+Bundler: `gem install bundler`
+
+Get Things installed: `bundle update`
+
+### View it
 `bundle exec jekyll serve --drafts` -- this includes the drafts, and lets you
 view the website. The port/url will be outputted at after the server has started
 up.
