@@ -8,13 +8,14 @@ $main-width: 512px;
     --body-colour: #24292e;
     --post-title-colour: black;
     --quote-background-colour: #bbe6ff;
-    --quote-border-colour: #bbe6ff;
+    --quote-border-colour: #000000;
     --sumary-font-colour: #9C9C9C;
     --group-header-font-colour: #9C9C9C;
     --tag-background-colour: #D8D8D8;
     --tag-font-colour: #454545;
-    --higlight-background-colour: whitesmoke;
+    --highlight-background-colour: whitesmoke;
     --header-font-colour: #5e5d5d;
+    --header-h2-font-colour: #24292e;
     --table-header-background-colour: whitesmoke;
     --table-header-underline-colour: black;
     --table-border-colour: #ddd;
@@ -30,13 +31,15 @@ $main-width: 512px;
     :root {
         --body-background-colour: #232323;
         --body-colour: #ebebeb;
+        --header-h2-font-colour: #ebebeb;
         --post-title-colour: white;
         --quote-background-colour: inherit;
+        --quote-border-colour: #818181;
         --sumary-font-colour: rgb(172, 172, 172);
         --group-header-font-colour: #9C9C9C;
         --tag-background-colour: #727272;
         --tag-font-colour: rgb(228, 228, 228);
-        --higlight-background-colour: #3b3b3b;
+        --highlight-background-colour: #3b3b3b;
         --header-font-colour: #949494;
 
         --table-header-background-colour: rgb(46, 46, 46);
@@ -100,13 +103,20 @@ h2 {
 }
 
 blockquote {
-    border-style: solid;
-    border-width: 1px;
-    border-left-width: 4px;
-    border-color: var(--quote-border-colour);
+    border-style: none none none solid;
+    border-width: 4px;
+    border-color: transparent;
+    border-left-color: var(--quote-border-colour);
     padding-left: 12px;
     margin-left: 0px;
-    font-style: oblique;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+blockquote.post-note {
+    background-color: var(--highlight-background-colour);
+    color: var(--header-font-colour);
+    font-size: 14px;
 }
 
 table {
@@ -365,7 +375,7 @@ a.post-title {
 
     > .highlight,
     > .highlighter-rouge {
-        background-color: var(--higlight-background-colour);
+        background-color: var(--highlight-background-colour);
         padding: 8px;
         border-radius: 4px;
     }
@@ -383,6 +393,7 @@ a.post-title {
     h2 {
         font-size: 2em;
         margin-bottom: 0.2em;
+        color: var(--header-h2-font-colour);
     }
     h3 { font-size: 1.25em; }
     h4 { font-size: 1.0em; }

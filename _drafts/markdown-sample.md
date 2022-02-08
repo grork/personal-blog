@@ -65,6 +65,10 @@ _This is italic text_
 But also a single quote on it's own:
 > Single quote, with many words
 
+Also with a custom style
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus, enim quis fringilla ultricies, eros massa suscipit ex, quis ornare mauris nisl nec ex. Vestibulum porta pharetra consectetur. 
+{: .post-note}
+
 ## Lists
 ### Unordered
 

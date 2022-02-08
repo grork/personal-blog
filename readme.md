@@ -12,7 +12,7 @@ Bundler: `gem install bundler`
 Get Things installed: `bundle update`
 
 ### View it
-`bundle exec jekyll serve --drafts` -- this includes the drafts, and lets you
+`bundle exec jekyll serve --drafts --future` -- this includes the drafts, and lets you
 view the website. The port/url will be outputted at after the server has started
 up.
 
