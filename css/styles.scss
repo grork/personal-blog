@@ -116,7 +116,7 @@ blockquote {
 blockquote.post-note {
     background-color: var(--highlight-background-colour);
     color: var(--header-font-colour);
-    font-size: 14px;
+    font-size: 0.9em;
 }
 
 table {
@@ -387,11 +387,11 @@ a.post-title {
     }
 
     h1 {
-        font-size: 3em;
+        font-size: 2em;
         margin-bottom: 0.5em;
     }
     h2 {
-        font-size: 2em;
+        font-size: 1.8em;
         margin-bottom: 0.2em;
         color: var(--header-h2-font-colour);
     }
