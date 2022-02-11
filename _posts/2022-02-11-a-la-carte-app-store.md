@@ -6,7 +6,7 @@ description: aka What do I get for that 30%?
 
 Apple’s [proposal](https://developer.apple.com/news/?id=uub8j2f1) for the Netherlands Dating App Purchase ACM ruling has had many decrying the proposal. At best the proposal is obtuse, at worst it's pure greed. South Korea has laid out similar [requirements](https://www.reuters.com/technology/skorea-targets-apple-over-new-app-store-regulation-2021-10-15/). What does it cost Apple to deliver apps for developers?
 
-> Note, [others](Going Dutch https://daringfireball.net/2022/02/going_dutch) have gone deeper into the larger topic. This post focuses specifically on the cost aspects.
+> Note, [others](https://daringfireball.net/2022/02/going_dutch) have gone deeper into the larger topic. This post focuses specifically on the cost aspects.
 {: .post-note}
 
 Today, Apple has a ([mostly](https://developer.apple.com/app-store/review/guidelines/#3.1.3a)) blanket 30% commission on all transactions. Apples proposal to the Netherlands: (**emphasis** mine)
@@ -34,11 +34,14 @@ None of these are ‘free’ – someone has to build & operate them at scale. N
 
 If we [tot up](https://www.merriam-webster.com/dictionary/tot%20up) the median costs of the individual component, assuming first-month costs only, guessing that customer growth doesn’t vary significantly month to month, along with some sweeping generalisations, we arrive at some dollar-values:
 
-See [spreadsheet](https://1drv.ms/x/s!Ap3hdML7twidk58sVkJK_lZMKh8J9g?e=ZR54Se) for a breakdown, and the Appendix for details.
+See [spreadsheet](https://1drv.ms/x/s!Ap3hdML7twidk58sVkJK_lZMKh8J9g?e=ZR54Se) for a breakdown, and the [Appendix]({% link supporting-material/a-la-carte-app-store-appendix.md %}) for details.
 
 | **Item**                         | **Median Cost**   |
 | -------------------------------- | ----------------- |
+| _Developer Experience_           |                   |
 | Developer Tooling                | $30/month         |
+| Developer Laptop                 | $55/month         |
+| Developer Device                 | $83/month         |
 | _App Delivery_                   |                   |
 | Product Listing                  | $15/month         |
 | Last Mile QA                     | $114/month        |
@@ -72,4 +75,6 @@ As I’ve [previously talked about](https://www.codevoid.net/ruminations/2021/03
 
 There are some technical challenges here (aka if you host on your own CDN, how does that work with App Review?), but it’s mostly just a _policy_ and _billing_ choice.
 
-Apple believes it delivers ‘best in class’ in anything it does. The App Store is pretty good as a store. But it needs to let it be **seen** as best-in-class by offering _choice_, and that requires it to [unbundle](https://stratechery.com/outline/bundling-and-unbundling/) the _developer_ services of the store.
+Apple believes it delivers ‘best in class’ in anything it does. The App Store is pretty good as a store[^store-policy]. But it needs to let it be **seen** as best-in-class by offering _choice_, and that requires it to [unbundle](https://stratechery.com/outline/bundling-and-unbundling/) the _developer_ services of the store.
+
+[^store-policy]: This is independent of the _policies_ of the store. Thats a wholly separate discussion.
