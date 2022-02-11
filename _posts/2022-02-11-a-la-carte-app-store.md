@@ -4,10 +4,10 @@ tags: [ "apple", "appstore", "opinions", "technology", "business" ]
 description: aka What do I get for that 30%?
 ---
 
+Apple’s [proposal](https://developer.apple.com/news/?id=uub8j2f1) for the Netherlands Dating App Purchase ACM ruling has had many decrying the proposal. At best the proposal is obtuse, at worst it's pure greed. South Korea has laid out similar [requirements](https://www.reuters.com/technology/skorea-targets-apple-over-new-app-store-regulation-2021-10-15/). What does it cost Apple to deliver apps for developers?
+
 > Note, [others](Going Dutch https://daringfireball.net/2022/02/going_dutch) have gone deeper into the larger topic. This post focuses specifically on the cost aspects.
 {: .post-note}
-
-Apple’s [proposal](https://developer.apple.com/news/?id=uub8j2f1) for the Netherlands Dating App Purchase ACM ruling has had many decrying the proposal. At best the proposal is obtuse, at worst it's greed of the worst kind. South Korea has laid out similar [requirements](https://www.reuters.com/technology/skorea-targets-apple-over-new-app-store-regulation-2021-10-15/).
 
 Today, Apple has a ([mostly](https://developer.apple.com/app-store/review/guidelines/#3.1.3a)) blanket 30% commission on all transactions. Apples proposal to the Netherlands: (**emphasis** mine)
 
