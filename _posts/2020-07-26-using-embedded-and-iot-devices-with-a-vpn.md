@@ -3,6 +3,7 @@ title: Using embedded and IoT devices with a VPN
 tags: [ "vpn", "working-from-home", "software" ]
 description: I needed to connect smart devices to a VPN. Here's what I found
 ---
+
 Modern embedded devices such as connected media players (Apple TV, Roku, Smart
 TVs), or IoT (internet of things) devices are constrained in what you, the end
 user, can change in configuration, and the software you can run. This is for
@@ -120,21 +121,26 @@ The files below are tweaked versions of the ones I’ve been using for a few
 months now. Edit for your configuration as needed — IPs, file paths etc.
 
 #### up.sh
+
+> Update 2022-02-14: Removed use of `$ifconfig_remote`, and replaced with routing
+> directly to the device. This is 'cause not all providers supply that parameter
+> making it difficult to follow that pattern. New solution works just as well!
+{: .post-note}
+
 Place this at the location you chose for your `route-up` command earlier
 ```bash
 #! /bin/bash
 # Log Useful information
 echo --- Setting up routes >> ~/vpn_log.txt
-echo -n "IP $ifconfig_local, " >> ~/vpn_log.txt
-echo Gateway $ifconfig_remote  >> ~/vpn_log.txt
+echo "IP $ifconfig_local, " >> ~/vpn_log.txt
 
 # Configure the routes
 # Add a route for our gateway from the local IP
 # Add Additional devices with static IPs here
-ip rule add from 192.168.0.42 table openvpn # Device A IP address
+ip rule add from 192.168.0.42 table openvpn # Device A's IP address
 
 # openvpn here refers to the routing table you created in /etc/iproute2/rt_tables
-ip route add default via $ifconfig_remote dev tun0 table openvpn
+ip route add default dev tun0 table openvpn
 
 # Set up the SNAT rule
 iptables -t nat -A POSTROUTING -o tun0 -j SNAT --to-source $ifconfig_local
@@ -149,8 +155,7 @@ Place this at the location you chose for your `route-pre-down` command earlier
 #! /bin/bash
 # Log Useful Information
 echo --- Tearing Down >> ~/vpn_log.txt
-echo -n "IP $ifconfig_local, " >> ~/vpn_log.txt
-echo Gateway $ifconfig_remote  >> ~/vpn_log.txt
+echo "IP $ifconfig_local, " >> ~/vpn_log.txt
 
 # Disable IP Forwarding before dropping routes
 # This is important, becuase we don't want packets
@@ -163,7 +168,7 @@ iptables -t nat -D POSTROUTING -o tun0 -j SNAT --to-source $ifconfig_local
 
 # Remove Routing Rules
 # openvpn here refers to the routing table you created in /etc/iproute2/rt_tables
-ip route del default via $ifconfig_remote dev tun0 table openvpn
+ip route del default dev tun0 table openvpn
 # Add Additional devices with static IPs here
 ip rule del from 192.168.0.42 table openvpn # Device A IP address
 
