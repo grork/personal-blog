@@ -64,9 +64,9 @@ However…
 ## TypeScript compiler behaviour detour
 
 
-Adding the dependency on `browser-sync` causes compile failures: [`setTimeout`](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) no longer returns `number`, but a [`NodeJS.Timeout`](https://nodejs.org/api/timers.html#class-timeout)` type. Why is that – we didn't change our API target!?
+Adding the dependency on `browser-sync` causes compile failures: [`setTimeout`](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) no longer returns `number`, but a [`NodeJS.Timeout`](https://nodejs.org/api/timers.html#class-timeout) type. Why is that – we didn't change our API target!?
 
-Turns out, `browser-sync` transitively includes a TypeScript types file (`@types/node` at the type of writing, via its [`engine.io`](https://github.com/socketio/engine.io) dependency). By default, these files are *automatically* discovered by the TypeScript compiler. We don't want that behaviour because of the *implicit* nature of it – you no longer know what types you're using. This specific case it a classic example of that, as causes clashes with the browser API.
+Turns out, `browser-sync` transitively includes a TypeScript types file (`@types/node` at the type of writing, via its [`engine.io`](https://github.com/socketio/engine.io) dependency). By default, these files are *automatically* discovered by the TypeScript compiler. We don't want that behaviour because of the *implicit* nature of it – you no longer know what types you're using. This specific case it a classic example of that, as causes clashes with the browser API.
 
 To fix this you can set [`compilerOptions.types`](https://www.typescriptlang.org/tsconfig#types) in [`tsconfig.json`](https://www.typescriptlang.org/tsconfig) to `[]`. This will disable automatic 'global' type import from discovered TypeScript files. This **does not** prevent those types from being imported with an `import` statement!
 
