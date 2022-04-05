@@ -262,8 +262,15 @@ blockquote > p:first-child {
 
 pre,
 code {
-    font-size: 16px;
+    font-size: 15px;
     white-space: pre-wrap;
+}
+
+code.highlighter-rouge {
+    font-family: "Code", monospace;
+    background-color: var(--highlight-background-colour);
+    padding: 2px 8px;
+    border-radius: 2px;
 }
 
 .group-container {
