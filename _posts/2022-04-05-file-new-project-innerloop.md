@@ -1,5 +1,5 @@
 ---
-title: File/New/Project &mdash; Simpler Developer Innerloop
+title: File/New/Project &mdash; A Simple Developer Innerloop
 description: Developer inner loops are critical. Getting them setup requires
              many steps. I take a few steps to make the simplest cases simple.
 tags: [ "open-source", "opinions", "programming", "web", "javascript", "ide", "vscode" ]
