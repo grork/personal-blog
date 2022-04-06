@@ -142,12 +142,10 @@ Substituting these in package.json was simple — `rimraf` being a simple replac
 Now it works on windows *and* mac. Yay!
 
 # Template Repo
-
-
 Overall, these steps are not complicated, and only need to happen once per project. But I’d rather not have to do it every time I want to start a simple – dumb – web page. I could have made some extensions for `create-react-app` or `neutrino`, but it felt like it was 'baggage' for my *aspirations.* So I made a [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) [repo](https://github.com/grork/innerloop-template) – these are repos that GitHub makes it easy to click-once to create a new *independent* repository that you can just start working in. It's not connected to my repo, and lets you get going quickly & make whatever changes you wish. You can find the template at [https://github.com/grork/innerloop-template](https://github.com/grork/innerloop-template) – click "Use this template” if you want to use it.
 
 [^template-tools]: There are tools such as `create-react-app` or [Neutrino](https://neutrinojs.org) (both templating tools), as well as kitchen-sink tools like [Parcel](https://parceljs.org) that make *parts* easier. But they bring some foundational opinions (React requirement for `create-react-app`, general dependency growth with Neutrino), minimal progressive disclosure (Neutrino), or don't solve sensible editor/IDE integration (all of them).
 
-This leads to the paradox that you're either bringing baggage, or still left fumbling for what to do next. None of them make debugging *simple* people are likely to gravitate to `console.log` or spray & pray debugging.
+    This leads to the paradox that you're either bringing baggage, or still left fumbling for what to do next. None of them make debugging *simple* people are likely to gravitate to `console.log` or spray & pray debugging.
 
-It's certainly possible to create templates that would get you to the right place but they're all “and” solutions on top of an already opt-in path (install extra tool, get extension to tool, then create project). It would be amazing if `npm` added something like .NET’s `dotnet new` [template](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates) format. There’s a whole other rant in here, but that’s for another day.
+    It's certainly possible to create templates that would get you to the right place but they're all “and” solutions on top of an already opt-in path (install extra tool, get extension to tool, then create project). It would be amazing if `npm` added something like .NET’s `dotnet new` [template](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates) format. There’s a whole other rant in here, but that’s for another day.
