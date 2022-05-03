@@ -1,5 +1,5 @@
 ---
-title: File/New/Project &mdash; Simple Developer Innerloops with VS Code
+title: File/New/Project &mdash; Simple Developer Inner Loops with VS Code
 description: Developer inner loops are critical. Getting them setup requires
              many steps. I take a few steps to make the simplest cases simple in
              Visual Studio Code and Panic Nova.
