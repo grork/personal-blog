@@ -14,7 +14,9 @@ Well, in this endeavour I’ve been down multiple rabbit holes, and I’m both s
 
 I tweeted about it:
 
-https://twitter.com/grork/status/1513984856014741504
+> Software development can be incredibly demoralising. You have an idea. On the surface it seems simple. As you get to the details distinct from the idea itself (ecosystem & infra), you’re dragged into a maze resembling an Escher drawing.
+>
+> Brought to you by VS Code’s extension API.
 
 It’s not that it’s _overwhelming_, or _discouraging_ (ok, maybe a little demoralising), but it does take some of your _energy_, and _wonder_ away.
 

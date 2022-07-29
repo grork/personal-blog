@@ -60,4 +60,10 @@ no upside. It wasn’t cheaper, and it doesn’t _behave_ any faster. Why should
 continue to put energy into it when, to channel Marie Kondo, it doesn’t bring me
 _joy_.
 
-https://twitter.com/grork/status/1119998906408898565
+> Turned my 19H1 Surface Laptop 2 on for the first time in maybe a week.
+> - IDs me & unlocks
+> - ⌨️ & 🐭 don’t work. I assume it’s hung, but power key puts it in sleep/wakes
+> - C-A-D does nothing
+> - But wait, touch works! I’ll reboot.
+>
+> Nope - 2x reboots, no ⌨️/🐭
