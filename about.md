@@ -13,7 +13,7 @@ Dominic:
 If you have any comments about this site, please file an issue on [GitHub](https://github.com/grork/personal-blog/issues)
 
 ## Talks I have given
-### [Creating Emotionally Relevant Experiences with Fluent Design](https://channel9.msdn.com/Events/Build/2017/T6092-R1)  
+### [Creating Emotionally Relevant Experiences with Fluent Design](https://youtu.be/kIOCN8fMaYg)  
 [Claudio Guglieri](https://www.linkedin.com/in/claudioguglieri/), [Mike Harnisch](https://www.linkedin.com/in/michael-harnisch-08aba01/) & I talk about how we brought the fluent design language into various in-box windows apps (Groove, Movies & TV)
 
 ### [LaunchDarkly: Custom Attributes for Fun & Scale](https://launchdarkly.com/galaxy/custom-attributes-for-fun-and-scale/)  
