@@ -435,6 +435,13 @@ img.image-fill-width {
     width: 100%;
 }
 
+/* Size embedded YouTube iframes in a sensible way */
+p > iframe {
+    aspect-ratio: 16 / 9;
+    height: 100%;
+    width: 100%;
+}
+
 .attribution-container {
     margin-top: 0px;
     margin-bottom: 24px;

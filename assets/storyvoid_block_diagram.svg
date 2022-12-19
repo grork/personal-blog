@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="914px" height="336px" viewBox="0 0 914 336" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Block Diagram</title>
+    <defs>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#E5E5E5" offset="0%"></stop>
+            <stop stop-color="#C9C9C9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#E5E5E5" offset="0%"></stop>
+            <stop stop-color="#C9C9C9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#E5E5E5" offset="0%"></stop>
+            <stop stop-color="#C9C9C9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#E5E5E5" offset="0%"></stop>
+            <stop stop-color="#C9C9C9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-1.11022302e-14%" y1="50%" x2="100%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#E5E5E5" offset="0%"></stop>
+            <stop stop-color="#C9C9C9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Block-Diagram" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Browser-Platform" transform="translate(11.000000, 247.000000)">
+            <rect id="Rectangle" stroke="#0078D4" x="0.5" y="0.5" width="752" height="49" rx="8"></rect>
+            <text id="Browser-platform" font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="323.300728" y="31">Browser platform</tspan>
+            </text>
+        </g>
+        <g id="Windows-API" transform="translate(772.000000, 247.000000)">
+            <rect id="Rectangle" stroke="#0078D4" x="0.5" y="0.5" width="126" height="49" rx="8"></rect>
+            <text font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="23" y="31">Windows API</tspan>
+            </text>
+        </g>
+        <g id="External-Component-Legend-Copy" transform="translate(335.000000, 309.000000)">
+            <rect id="Rectangle" stroke="#0078D4" x="0.5" y="0.5" width="39" height="19" rx="8"></rect>
+            <text id="Thing" font-family="SegoeUI, Segoe UI" font-size="7" font-weight="normal" letter-spacing="-0.107692297" fill="#000000">
+                <tspan x="11" y="13">Thing</tspan>
+            </text>
+            <text id="=-External-component" font-family="SegoeUI, Segoe UI" font-size="7" font-weight="normal" letter-spacing="-0.107692297" fill="#000000">
+                <tspan x="43" y="13">= External component</tspan>
+            </text>
+        </g>
+        <g id="Internal-Component-Legend" transform="translate(455.000000, 309.000000)">
+            <rect id="Rectangle" stroke="#A9A9A9" fill="url(#linearGradient-1)" x="0.5" y="0.5" width="39" height="19" rx="8"></rect>
+            <text id="Thing" font-family="SegoeUI, Segoe UI" font-size="7" font-weight="normal" letter-spacing="-0.107692297" fill="#000000">
+                <tspan x="11" y="13">Thing</tspan>
+            </text>
+            <text id="=-External-component" font-family="SegoeUI, Segoe UI" font-size="7" font-weight="normal" letter-spacing="-0.107692297" fill="#000000">
+                <tspan x="43" y="13">= External component</tspan>
+            </text>
+        </g>
+        <g id="WinJS" transform="translate(560.000000, 189.000000)">
+            <rect id="Rectangle" stroke="#0078D4" x="0.5" y="0.5" width="338" height="49" rx="8"></rect>
+            <text font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="151" y="31">WinJS</tspan>
+            </text>
+        </g>
+        <g id="db.js" transform="translate(238.000000, 189.000000)">
+            <rect id="Rectangle" stroke="#0078D4" x="0.5" y="0.5" width="313" height="49" rx="8"></rect>
+            <text font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="143" y="31">db.js</tspan>
+            </text>
+        </g>
+        <g id="OAuth-Helper" transform="translate(15.000000, 189.000000)">
+            <rect id="Rectangle" stroke="#A9A9A9" fill="url(#linearGradient-2)" x="0.5" y="0.5" width="214" height="49" rx="8"></rect>
+            <text font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="65" y="31">OAuth Helper</tspan>
+            </text>
+        </g>
+        <g id="Instapaper-API-Wrapper" transform="translate(15.000000, 131.000000)">
+            <rect id="Rectangle" stroke="#A9A9A9" fill="url(#linearGradient-2)" x="0.5" y="0.5" width="214" height="49" rx="8"></rect>
+            <text id="Instapaper-API-Wrapp" font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="34" y="31">Instapaper API Wrapper</tspan>
+            </text>
+        </g>
+        <g id="Database-Model" transform="translate(238.000000, 131.000000)">
+            <rect id="Rectangle" stroke="#A9A9A9" fill="url(#linearGradient-3)" x="0.5" y="0.5" width="313" height="49" rx="8"></rect>
+            <text font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="106" y="31">Database Model</tspan>
+            </text>
+        </g>
+        <g id="Experiences-Abstraction" transform="translate(560.000000, 131.000000)">
+            <rect id="Rectangle" stroke="#A9A9A9" fill="url(#linearGradient-4)" x="0.5" y="0.5" width="338" height="49" rx="8"></rect>
+            <text id="Experiences-Abstract" font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="96" y="31">Experiences Abstraction</tspan>
+            </text>
+        </g>
+        <g id="Instapaper-Sync" transform="translate(15.000000, 73.000000)">
+            <rect id="Rectangle" stroke="#A9A9A9" fill="url(#linearGradient-5)" x="0.5" y="0.5" width="437" height="49" rx="8"></rect>
+            <text font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="170" y="31">Instapaper Sync</tspan>
+            </text>
+        </g>
+        <g id="Bookmarks-View-Model" transform="translate(460.000000, 73.000000)">
+            <rect id="Rectangle" stroke="#A9A9A9" fill="url(#linearGradient-2)" x="0.5" y="0.5" width="214" height="49" rx="8"></rect>
+            <text id="Bookmark-List-View-M" font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="25" y="31">Bookmark List View Model</tspan>
+            </text>
+        </g>
+        <g id="Boomarks-Experience" transform="translate(460.000000, 15.000000)">
+            <rect id="Rectangle" stroke="#A9A9A9" fill="url(#linearGradient-2)" x="0.5" y="0.5" width="214" height="49" rx="8"></rect>
+            <text id="Bookmarks-List-Exper" font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="26" y="31">Bookmarks List Experience</tspan>
+            </text>
+        </g>
+        <g id="Reading-View-Model" transform="translate(683.000000, 73.000000)">
+            <rect id="Rectangle" stroke="#A9A9A9" fill="url(#linearGradient-2)" x="0.5" y="0.5" width="214" height="49" rx="8"></rect>
+            <text font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="44" y="31">Reading View Model</tspan>
+            </text>
+        </g>
+        <g id="Reading-Experience" transform="translate(683.000000, 15.000000)">
+            <rect id="Rectangle" stroke="#A9A9A9" fill="url(#linearGradient-2)" x="0.5" y="0.5" width="214" height="49" rx="8"></rect>
+            <text font-family="SegoeUI, Segoe UI" font-size="14.5" font-weight="normal" letter-spacing="-0.2230769" fill="#000000">
+                <tspan x="47" y="31">Reading Experience</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
