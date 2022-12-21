@@ -122,7 +122,7 @@ specific displays, and two **rare** cables. Here's what I purchased in the end:
   VRAM, 3 DisplayPort, 1 HDMI)
 - Razer [Core
   X](https://www.razer.com/gaming-egpus/Razer-Core-X/RC21-01310100-R3U1) eGPU
-- LG 22M4DKA (Two, via eBay!)
+- LG 22MD4KA (Two, via eBay!)
 - [Belkin Charge & Sync for Huawei VR
   Glass](https://www.giztop.com/belkin-charge-and-sync-cable-for-huawei-vr-glass.html)
   (Two, from somewhere random on the internet)
