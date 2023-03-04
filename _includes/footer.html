@@ -1,7 +1,7 @@
 <footer>
     <a href="https://github.com/{{ site.github_username}}"><img src="{{ "/images/github.svg" | relative_url }}" alt="GitHub"></a>
     <a href="https://www.linkedin.com/in/dhopton"><img src="{{ "/images/linkedin-in.svg" | relative_url }}" alt="LinkedIn"></a>
-    <a href="https://twitter.com/{{ site.twitter_username}}"><img src="{{ "/images/twitter.svg" | relative_url }}" alt="Twitter"></a>
+    <a href="https://mastodon.social/@{{ site.twitter_username}}" rel="me"><img src="{{ "/images/mastodon.svg" | relative_url }}" alt="Mastodon"></a>
     <a href="{% link feed.xml %}"><img src="{{ "/images/rss.svg" | relative_url }}" alt="RSS Feed"></a>
     {% unless page.url == "/" %}
     <span>/</span>
