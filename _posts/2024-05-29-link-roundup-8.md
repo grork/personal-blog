@@ -18,10 +18,10 @@ I note, for the record, once again there seem to be a large number of AI related
 - [Looking for AI use cases](https://www.ben-evans.com/benedictevans/2024/4/19/looking-for-ai-use-cases): A great take on AI (well, chat bots / autonomous agents), and I’m in total agreement. It reminds me of the arc of Goggles. AI *is* the future, but we’re not *in* the future. Yet. (and it’s  a long way away)
 - [AI isnt useless](https://www.citationneeded.news/ai-isnt-useless/): Molly white does a brilliant job of capturing how I feel about The AIs. She writes so well, and covers nuance. Love it. (I wish we could agree to call ML ML, and leave AI to the future)
 - A series of papers that tell a journey for Apple, and how they think they’ve found a real world use case for the LLM. Reading these makes me feel they’re really about accessibility scenarios, but maybe they’re able to get them sufficiently rich to work for the Siri case.
-  - MARRS (reference resolution) https://arxiv.org/abs/2311.01650v1
-  - MM1 (combining ferret model) https://arxiv.org/abs/2403.09611v3
-  - ReALM (more reference resolution) https://arxiv.org/abs/2403.20329v1
-  - Ferret-UI (putting all of it together): https://arxiv.org/abs/2404.05719v1
+  - [MARRS (reference resolution)](https://arxiv.org/abs/2311.01650v1)
+  - [MM1 (combining ferret model)](https://arxiv.org/abs/2403.09611v3)
+  - [ReALM (more reference resolution)](https://arxiv.org/abs/2403.20329v1P)
+  - [Ferret-UI (putting all of it together)](https://arxiv.org/abs/2404.05719v1)
 - [Among the AI doomsayers](https://www.newyorker.com/magazine/2024/03/18/among-the-ai-doomsayers): Maybe I’ve been around too long, but this article feels like an echo of the various booms of the last 25 years — The Internet (DotCom), “Technology” (Web 2.0), and to a lesser extent Crypto. It’s quirky (to the external observer) written about _by_ an outsider seeking insight and failing to find any. But because of the quirkiness, it feels like it’s shining a light onto a unique story. But I remember this with the DotCom boom/bust, and most definitely with the nascent Web 2.0. It’s not a failure of the times, or even the article, but it’s important to remember that when we say ‘history doesn’t repeat, but it does rhyme’, that includes the cycles.
 
 # Software Engineering
