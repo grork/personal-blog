@@ -1,7 +1,6 @@
 ---
 title: It only feels like rent-seeking when…
 tags: [ "subscriptions", "business", "vibes" ]
-description: "Maybe computation should happen on your devices as much as possible to lower power infrastructure demand"
 ---
 
 Subscription software only feels like rent-seeking when you don’t
