@@ -18,6 +18,9 @@ collections:
   attributions:
     sort_by: position
 
+feed:
+  posts_limit: 15
+
 defaults:
   -
     scope:

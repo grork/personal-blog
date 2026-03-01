@@ -5,7 +5,7 @@ Primary content is in `_posts`, layout for posts is in `_layout/posts.html`.
 
 ## How to view it locally
 ### Install prerequisites
-Ruby: `brew install ruby@2.7` (and follow instructions for adding to the path)
+Ruby: `brew install ruby@3.4` (and follow instructions for adding to the path)
 
 Bundler: `gem install bundler`
 
