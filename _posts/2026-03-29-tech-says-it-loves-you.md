@@ -11,6 +11,7 @@ their axes are. **But**, really, once a tech organisation has achieved success,
 it will end up solving the problems **it has created** for itself. **Not**
 customer problems, but those that matter to the organisation. They take many
 forms, some more insidious than others:
+
 - Refactoring code, to make it ‘better’. Better *for whom*? The customer? Or
   engineering?
 - “Cost Efficiency”, without the expectation of passing any savings on to
