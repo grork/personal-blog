@@ -1,0 +1,19 @@
+{%- set metaTitle = title or site.title -%}
+{%- set metaDescription = description or site.description -%}
+{%- set canonicalUrl = site.url + site.baseurl + page.url -%}
+<meta property="og:title" content="{{ metaTitle }}" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="{{ metaDescription }}" />
+<meta property="og:description" content="{{ metaDescription }}" />
+<link rel="canonical" href="{{ canonicalUrl }}" />
+<meta property="og:url" content="{{ canonicalUrl }}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+{% if tags %}<meta property="og:type" content="article" />
+<meta property="article:published_time" content="{{ page.date | dateToRfc3339 }}" />{% else %}<meta property="og:type" content="website" />{% endif %}
+<script type="application/ld+json">
+{%- if tags %}
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"{{ metaTitle }}","datePublished":"{{ page.date | dateToRfc3339 }}","dateModified":"{{ page.date | dateToRfc3339 }}","description":"{{ metaDescription }}","url":"{{ canonicalUrl }}","mainEntityOfPage":{"@type":"WebPage","@id":"{{ canonicalUrl }}"}}
+{%- else %}
+{"@context":"https://schema.org","@type":"WebPage","headline":"{{ metaTitle }}","description":"{{ metaDescription }}","url":"{{ canonicalUrl }}"}
+{%- endif %}
+</script>

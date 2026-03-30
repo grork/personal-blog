@@ -56,7 +56,6 @@ struct Building {
 }
 ```
 
-{:start="2"}
 2. The `extension ABaseType where Self == SomeType` case is clearer — when the type is known in swift, you can omit the type qualifier. e.g. `func thing(do: AnotherType)` can be called `thing(do: .staticOnAnotherType)`. If you use the `where` extension from above you are effectively adding to that type for lexical reasons too, allowing you to omit typing the full type (your type). So people use that pattern to allow the syntactically shorter referencing. I had to add the type qualifier to the member reference to be able to remove that extension.
 
 In my experiment, I didn’t remove type-scoped extension — it extends `Array` when constrained to a concrete type, so it has a convenience method to convert to another type.

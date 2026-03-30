@@ -1,13 +1,14 @@
 ---
+permalink: /
 ---
 <!doctype html>
 <html prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% feed_meta %}
-    {% seo title=false %}
-    <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+    <link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | url }}" title="{{ site.title }}">
+    {% include "seo.njk" %}
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
     <title>{{ site.title }}</title>
   </head>
   <body>
@@ -16,7 +17,7 @@
       <h1>{{ site.title }}</h1>
     </header>
     <!-- Grouped by Year -->
-    {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+    {% set postsByYear = collections.posts | reverse | groupByYear %}
     <main>
     {% for year in postsByYear %}
       <!-- Individual year -->
@@ -25,12 +26,12 @@
         <!-- Posts in that year -->
         <div class="group-posts">
           {% for post in year.items %}
-            {% include individual_post.html %}
+            {% include "individual_post.njk" %}
           {% endfor %}
         </div>
       </div>
     {% endfor %}
     </main>
-    {% include footer.html %}
+    {% include "footer.njk" %}
   </body>
 </html>

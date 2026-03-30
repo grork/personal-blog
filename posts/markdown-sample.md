@@ -1,6 +1,7 @@
 ---
 title: Markdown Sample containing many items of interest
 tags: [ "draft", "markdown", "dont-publish" ]
+published: false
 ---
 Sample page, containing all the supported markdown content we can
 possibly imagine. Useful for testing. Don't publish.
@@ -97,12 +98,12 @@ Lazy
 Inline `code`
 
 Indented code
-{% highlight javascript linenos %}
+``` javascript
 // Some comments
 line 1 of code
 line 2 of code
 line 3 of code
-{% endhighlight %}
+```
 
 Block code "fences"
 ```

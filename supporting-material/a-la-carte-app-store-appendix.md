@@ -1,7 +1,8 @@
 ---
 title: Appendix - A-la-carté App Store
-layout: post
+layout: layouts/post.njk
 comments: false
+permalink: /supporting-material/a-la-carte-app-store-appendix.html
 ---
 # Developer Tooling
 

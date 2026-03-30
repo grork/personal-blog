@@ -34,7 +34,7 @@ None of these are ‘free’ – someone has to build & operate them at scale. N
 
 If we [tot up](https://www.merriam-webster.com/dictionary/tot%20up) the median costs of the individual component, assuming first-month costs only, guessing that customer growth doesn’t vary significantly month to month, along with some sweeping generalisations, we arrive at some dollar-values:
 
-See [spreadsheet](https://1drv.ms/x/s!Ap3hdML7twidk58sVkJK_lZMKh8J9g?e=ZR54Se) for a breakdown, and the [Appendix]({% link supporting-material/a-la-carte-app-store-appendix.md %}) for details.
+See [spreadsheet](https://1drv.ms/x/s!Ap3hdML7twidk58sVkJK_lZMKh8J9g?e=ZR54Se) for a breakdown, and the [Appendix](/ruminations/supporting-material/a-la-carte-app-store-appendix.html) for details.
 
 | **Item**                         | **Median Cost**   |
 | -------------------------------- | ----------------- |

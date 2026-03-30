@@ -1,0 +1,68 @@
+<!doctype html>
+<html prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | url }}" title="{{ site.title }}">
+    {% include "seo.njk" %}
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/syntax-highlighting.css' | url }}">
+    <title>{{ title }} &mdash; {{ site.title }}</title>
+  </head>
+  <body class="article-page">
+    <!-- Title and link to  home-->
+    <header>
+      <a href="{{ '/' | url }}" title="Home" class="article-page-home-link"><img src="{{ "/images/home.svg" | url }}" alt="Home"></a>
+      <h1>{{ title }}</h1>
+    </header>
+    {% if description %}
+    <summary>
+      {{ description }}
+    </summary>
+    {% endif %}
+    <!-- Summary information for the post inc. tags. -->
+    {% if tags %}
+    <section class="post-summary">
+      <div class="post-details">
+        <span>{{ page.date | readableDate }}</span>,
+        <span>{{ content | readingTime }} to read</span>
+      </div>
+      <div class="post-tags">
+          {% for tag in tags %}
+            {% if tag != "posts" %}
+            <div class="post-tag"><a href="{{ '/tags.html' | url }}#tag-{{ tag }}">{{ tag }}</a></div>
+            {% endif %}
+          {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+    <!-- Main article body -->
+    <article class="post-container">
+        {{ content | safe }}
+    </article>
+    {% if comments !== false %}
+    <script src="https://utteranc.es/client.js"
+        repo="grork/personal-blog"
+        issue-term="pathname"
+        theme="preferred-color-scheme"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        async>
+    </script>
+    {% endif %}
+    <!-- Footer for previous / next / social-media links -->
+    {% set previousPost = collections.posts | getPreviousPost(page) %}
+    {% set nextPost = collections.posts | getNextPost(page) %}
+    {% if nextPost or previousPost %}
+    <footer class="post-navigation">
+      {% if previousPost %}
+      <a href="{{ previousPost.url | url }}" class="nav-previous">previous</a>
+      {% endif %}
+      {% if nextPost %}
+      <a href="{{ nextPost.url | url }}" class="nav-next">next</a>
+      {% endif %}
+    </footer>
+    {% endif %}
+    {% include "footer.njk" %}
+  </body>
+</html>

@@ -1,0 +1,38 @@
+---
+permalink: /tags.html
+---
+<!doctype html>
+<html prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | url }}" title="{{ site.title }}">
+    {% include "seo.njk" %}
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+    <title>Tags &mdash; {{ site.title }}</title>
+  </head>
+  <body class="tags-page">
+    <!-- Site Header -->
+    <header>
+      <a href="{{ '/' | url }}" title="Home"><img src="{{ "/images/home.svg" | url }}" alt="Home"></a>
+      <h1>Tags</h1>
+    </header>
+    <main>
+    <!-- Grouped by Tag -->
+    {% set sortedTags = collections | getPostTags %}
+    {% for tagName in sortedTags %}
+      <!-- Individual Tag -->
+      <div class="group-container" id="tag-{{ tagName }}">
+        <div class="group-display">{{ tagName }}</div>
+        <!-- Posts in that tag -->
+        <div class="group-posts">
+        {% for post in collections[tagName] | reverse %}
+            {% include "individual_post.njk" %}
+        {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+    </main>
+    {% include "footer.njk" %}
+  </body>
+</html>

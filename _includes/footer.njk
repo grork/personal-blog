@@ -1,0 +1,19 @@
+<footer>
+    <a href="https://github.com/{{ site.github_username}}"><img src="{{ "/images/github.svg" | url }}" alt="GitHub"></a>
+    <a href="https://www.linkedin.com/in/dhopton"><img src="{{ "/images/linkedin-in.svg" | url }}" alt="LinkedIn"></a>
+    <a href="https://bsky.app/profile/grork.bsky.social"><img src="{{ "/images/bluesky.svg" | url }}" alt="Bluesky"></a>
+    <a href="https://mastodon.social/@{{ site.twitter_username}}" rel="me"><img src="{{ "/images/mastodon.svg" | url }}" alt="Mastodon"></a>
+    <a href="{{ '/feed.xml' | url }}"><img src="{{ "/images/rss.svg" | url }}" alt="RSS Feed"></a>
+    {% if page.url != "/" %}
+    <span>/</span>
+    <a href="{{ '/' | url }}">home</a>
+    {% endif %}
+    <span>/</span>
+    <a href="{{ "/assets/resume.pdf" | url }}">resume</a>
+    <span>/</span>
+    <a href="{{ '/about.html' | url }}">about</a>
+    <span>/</span>
+    <a href="{{ '/attribution.html' | url }}">attribution</a>
+    <span>/</span>
+    <span>copyright &copy; {{ "" | yearNow }}</span>
+</footer>

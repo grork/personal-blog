@@ -1,7 +1,8 @@
 ---
 title: About
-layout: post
+layout: layouts/post.njk
 comments: false
+permalink: /about.html
 ---
 
 Dominic:

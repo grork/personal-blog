@@ -1,0 +1,23 @@
+<!-- Individual Post -->
+<div class="post-summary">
+    <a class="post-title" href="{{ post.url | url }}">{{ post.data.title }}</a>
+    <div class="post-details">
+        <span>{{ post.date | readableDate }}</span>,
+        <span>{{ post.templateContent | readingTime }} to read</span>
+    </div>
+    <div class="post-excerpt">
+        {% if post.data.description %}
+        <summary>{{ post.data.description }}</summary>
+        {% endif %}
+        {{ post.templateContent | excerpt }}
+    </div>
+
+    <!-- Tags in that post -->
+    <div class="post-tags">
+        {% for tag in post.data.tags %}
+        {% if tag != "posts" %}
+        <div class="post-tag"><a href="{{ '/tags.html' | url }}#tag-{{ tag }}">{{ tag }}</a></div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

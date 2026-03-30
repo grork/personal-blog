@@ -1,5 +1,3 @@
----
----
 $main-width: 512px;
 
 :root {
@@ -52,8 +50,8 @@ $main-width: 512px;
         color: #a9a9ff;
     }
 
-    .rouge-table {
-        background-color: var(--quote-background-colour);
+    pre[class*="language-"] {
+        background-color: var(--highlight-background-colour);
     }
 }
 
@@ -175,13 +173,7 @@ a:link {
     color: var(--link-unvisited-colour);
 }
 
-.rouge-table .gutter.gl {
-    width: 24px;
-
-    .lineno {
-        width: auto;
-    }
-}
+/* Line numbers for code blocks (if enabled) */
 
 header {
     line-height: initial;
@@ -266,7 +258,7 @@ code {
     white-space: pre-wrap;
 }
 
-code.highlighter-rouge {
+code:not(pre code) {
     font-family: "Code", monospace;
     background-color: var(--highlight-background-colour);
     padding: 2px 8px;
@@ -380,8 +372,7 @@ a.post-title {
         max-width: 100%;
     }
 
-    > .highlight,
-    > .highlighter-rouge {
+    > pre[class*="language-"] {
         background-color: var(--highlight-background-colour);
         padding: 8px;
         border-radius: 4px;
