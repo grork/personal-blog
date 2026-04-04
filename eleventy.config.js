@@ -1,7 +1,6 @@
+const { HtmlBasePlugin } = require("@11ty/eleventy");
 const {
   dateToRfc3339,
-  absoluteUrl,
-  convertHtmlToAbsoluteUrls,
   getNewestCollectionItemDate,
 } = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -11,14 +10,13 @@ const markdownItFootnote = require("markdown-it-footnote");
 module.exports = function (eleventyConfig) {
   // --- Plugins ---
   eleventyConfig.addPlugin(syntaxHighlight);
+  // baseHref "/" disables the site-wide URL transform; the feed template passes
+  // an explicit absolute base to renderTransforms/htmlBaseUrl for feed content only.
+  eleventyConfig.addPlugin(HtmlBasePlugin, { baseHref: "/" });
 
   // RSS helper filters (registered manually since feedPlugin expects auto-generated feeds)
   eleventyConfig.addFilter("dateToRfc3339", dateToRfc3339);
-  eleventyConfig.addFilter("absoluteUrl", absoluteUrl);
   eleventyConfig.addFilter("getNewestCollectionItemDate", getNewestCollectionItemDate);
-  eleventyConfig.addFilter("htmlToAbsoluteUrl", async function (content, base) {
-    return await convertHtmlToAbsoluteUrls(content, base);
-  });
 
   // --- Passthrough copies ---
   eleventyConfig.addPassthroughCopy("images");
