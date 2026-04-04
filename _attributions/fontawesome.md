@@ -1,6 +1,6 @@
 ---
 title: Font Awesome
-position: 6
+position: 7
 source: https://fontawesome.com/
 ---
 
