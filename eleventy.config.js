@@ -56,20 +56,22 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", function (date) {
     const d = new Date(date);
     const day = d.getUTCDate();
-    const suffixes = ["th", "st", "nd", "rd"];
-    const relevantDigits = day < 30 ? day % 20 : day % 30;
-    const suffix = relevantDigits <= 3 ? suffixes[relevantDigits] : suffixes[0];
-    const months = [
-      "January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December",
-    ];
-    return `${day}${suffix} ${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+    const pr = new Intl.PluralRules("en", { type: "ordinal" });
+    const suffixes = { one: "st", two: "nd", few: "rd", other: "th" };
+    const suffix = suffixes[pr.select(day)];
+    const rest = new Intl.DateTimeFormat("en-GB", {
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    }).format(d);
+    return `${day}${suffix} ${rest}`;
   });
 
   // Reading time: "1 minute" / "5 minutes" (matches jekyll-time-to-read)
   eleventyConfig.addFilter("readingTime", function (content) {
     const text = (content || "").replace(/<[^>]+>/g, "");
-    const words = text.split(/\s+/).filter((w) => w.length > 0).length;
+    const segmenter = new Intl.Segmenter("en", { granularity: "word" });
+    const words = [...segmenter.segment(text)].filter((s) => s.isWordLike).length;
     const minutes = Math.max(1, Math.ceil(words / 265));
     return minutes === 1 ? "1 minute" : `${minutes} minutes`;
   });
@@ -128,19 +130,9 @@ module.exports = function (eleventyConfig) {
     return new Date().getFullYear().toString();
   });
 
-  // Date formatting for permalinks and general use
-  eleventyConfig.addFilter("date", function (date, format) {
-    const d = new Date(date);
-    if (format === "yyyy/MM/dd") {
-      const y = d.getUTCFullYear();
-      const m = String(d.getUTCMonth() + 1).padStart(2, "0");
-      const day = String(d.getUTCDate()).padStart(2, "0");
-      return `${y}/${m}/${day}`;
-    }
-    if (format === "%Y") {
-      return d.getUTCFullYear().toString();
-    }
-    return d.toISOString();
+  // Date as yyyy/MM/dd path segment (used in posts/posts.json permalink)
+  eleventyConfig.addFilter("date", function (date) {
+    return new Date(date).toISOString().slice(0, 10).replace(/-/g, "/");
   });
 
   // Strip .html extension from URL (for feed entry IDs)
