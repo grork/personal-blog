@@ -1,5 +1,4 @@
 const {
-  feedPlugin,
   dateToRfc3339,
   absoluteUrl,
   convertHtmlToAbsoluteUrls,
@@ -8,9 +7,6 @@ const {
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItFootnote = require("markdown-it-footnote");
-const sass = require("sass");
-const path = require("path");
-const htmlmin = require("html-minifier-terser");
 
 module.exports = function (eleventyConfig) {
   // --- Plugins ---
@@ -27,28 +23,7 @@ module.exports = function (eleventyConfig) {
   // --- Passthrough copies ---
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("css/syntax-highlighting.css");
-
-  // --- SCSS processing ---
-  eleventyConfig.addTemplateFormats("scss");
-  eleventyConfig.addExtension("scss", {
-    outputFileExtension: "css",
-    compile: async function (inputContent, inputPath) {
-      let parsed = path.parse(inputPath);
-      // Skip partials
-      if (parsed.name.startsWith("_")) return;
-
-      // Strip YAML front matter if present (Jekyll artifact)
-      const content = inputContent.replace(/^---\n---\n/, "");
-
-      let result = sass.compileString(content, {
-        loadPaths: [parsed.dir || "."],
-        style: "compressed",
-      });
-
-      return async () => result.css;
-    },
-  });
+  eleventyConfig.addPassthroughCopy("css");
 
   // --- Markdown-it configuration ---
   const markdownIt = require("markdown-it");
@@ -190,21 +165,6 @@ module.exports = function (eleventyConfig) {
     },
   });
 
-  // --- HTML Minification ---
-  eleventyConfig.addTransform("htmlmin", async function (content) {
-    if (
-      this.page.outputPath &&
-      this.page.outputPath.endsWith(".html")
-    ) {
-      return await htmlmin.minify(content, {
-        collapseWhitespace: true,
-        removeComments: true,
-        conservativeCollapse: true,
-      });
-    }
-    return content;
-  });
-
   // --- Config ---
   return {
     pathPrefix: "/ruminations/",
@@ -214,7 +174,7 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       data: "_data",
     },
-    templateFormats: ["njk", "md", "html", "scss"],
+    templateFormats: ["njk", "md", "html"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
   };

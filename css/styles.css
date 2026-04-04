@@ -1,5 +1,3 @@
-$main-width: 512px;
-
 :root {
     color-scheme: light dark;
     --body-background-colour: #ffffff;
@@ -61,7 +59,7 @@ body {
 }
 /* Main Content */
 body {
-    font-family: apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";    
+    font-family: apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     padding-bottom: 48px;
     color: var(--body-colour);
 
@@ -180,7 +178,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
+
     h1 {
         font-weight: 100;
         font-size: 36px;
@@ -350,7 +348,7 @@ a.post-title {
     display: flex;
     flex-direction: row;
     margin-top: 8px;
-    
+
     .post-tag {
         background-color: var(--tag-background-colour);
         color: var(--tag-font-colour);
