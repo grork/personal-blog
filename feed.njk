@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
 {%- for post in feedPosts %}
 {%- set postAbsoluteUrl = post.url | htmlBaseUrl(site.url + site.baseurl) %}
 {%- set postIdUrl = postAbsoluteUrl | stripHtmlExtension %}
-<entry><title type="html">{{ post.data.title }}</title><link href="{{ postAbsoluteUrl }}" rel="alternate" type="text/html" title="{{ post.data.title }}" /><published>{{ post.date | dateToRfc3339 }}</published><updated>{{ post.date | dateToRfc3339 }}</updated><id>{{ postIdUrl }}</id><content type="html" xml:base="{{ postAbsoluteUrl }}"><![CDATA[{{ post.templateContent | renderTransforms(post.data.page, site.url + site.baseurl) }}]]></content><author><name></name></author>
+<entry><title type="html">{{ post.data.title }}</title><link href="{{ postAbsoluteUrl }}" rel="alternate" type="text/html" title="{{ post.data.title }}" /><published>{{ post.date | dateToRfc3339 }}</published><updated>{{ post.date | dateToRfc3339 }}</updated><id>{{ postIdUrl }}</id><content type="html" xml:base="{{ postAbsoluteUrl }}"><![CDATA[{{ post.templateContent | renderTransforms(post.data.page, site.url + site.baseurl) | safe }}]]></content><author><name></name></author>
 {%- for tag in post.data.tags %}{%- if tag != "posts" %}<category term="{{ tag }}" />{% endif %}{%- endfor %}
 {%- if post.data.description %}<summary type="html"><![CDATA[{{ post.data.description }}]]></summary>{% endif %}</entry>
 {%- endfor %}
