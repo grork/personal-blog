@@ -9,7 +9,7 @@
         {% if post.data.description %}
         <summary>{{ post.data.description }}</summary>
         {% endif %}
-        {{ post.templateContent | excerpt }}
+        {{ post.templateContent | excerpt | safe }}
     </div>
 
     <!-- Tags in that post -->
